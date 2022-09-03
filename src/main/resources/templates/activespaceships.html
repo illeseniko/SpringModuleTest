@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktiv Űrhajók</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div>
+    <table> <tr>
+        <th>Regisztrációs kód:</th>
+        <th>Név:</th>
+        <th>Űrhajó osztálya:</th>
+        <th>Aktiv-e?: </th>
+    </tr>
+
+        <tr data-th-each="datas:${allSpaceShips}">
+            <td th:text="${datas.registrationCode}">Regisztrációs kód</td>
+            <td th:text="${datas.name}">Név</td>
+            <td th:text="${datas.spaceShipClass}">Űrhajó osztálya</td>
+            <td th:text="${datas.isActive}">Aktiv-e?</td>
+        </tr>
+    </table>
+</div>
+<form data-th-action="@{/activespaceships}" data-th-object="${activeShips}" >
+    <tr>
+        <td colspan="50"><button type="submit">Active ships!</button></td>
+    </tr>
+</form>
+
+
+</body>
+</html>

@@ -24,7 +24,7 @@ public class SpaceShipService {
         return (List<SpaceShip>) spaceShipRepo.findAll();
     }
 
-   /* public List<SpaceShip> activeShips(){
+    public List<SpaceShip> activeShips(){
         List<SpaceShip> result = new ArrayList<>();
         for (SpaceShip ship : allSpaceShips()){
             if (ship.isActive()){
@@ -34,6 +34,6 @@ public class SpaceShipService {
         return result;
     }
 
-    */
+
 
 }

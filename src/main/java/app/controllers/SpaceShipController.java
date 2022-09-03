@@ -38,17 +38,17 @@ public class SpaceShipController {
         return "allspaceships";
     }
 
-  /*  @GetMapping(value = {"/activespaceships"})
+    @GetMapping(value = {"/activespaceships"})
     public String activeShips(Model model) {
-        List<SpaceShip> ships =  spaceShipRepo.findSpaceShipByActiveTrue();
+        List<SpaceShip> ships =  spaceShipRepo.findAllByIsActiveTrue();
         model.addAttribute("shipActive", ships);
-        return "activespaceship";
+        return "activespaceships";
 
 
 
 
     }
 
-   */
+
     }
 
