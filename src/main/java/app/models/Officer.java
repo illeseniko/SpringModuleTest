@@ -2,11 +2,23 @@ package app.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 
-public class Officer {
+@Entity
+public class Officer  {
 
+
+
+    @Id
+   @GeneratedValue
+   private Long id;
+   @Column
     private String username;
 
     private String password;
@@ -16,6 +28,11 @@ public class Officer {
     private LocalDateTime workEnd;
 
     public Officer() {}
+
+    public Officer(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public String getUsername() {
         return username;
