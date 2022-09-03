@@ -3,6 +3,7 @@ package app.controllers;
 import app.models.Crew;
 import app.models.SpaceShip;
 import app.models.SpaceShipClass;
+import app.repositories.CrewRepo;
 import app.repositories.SpaceShipRepo;
 import app.services.SpaceShipService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +23,13 @@ public class SpaceShipController {
 
     private final SpaceShipService spaceShipService;
 
-    public SpaceShipController(SpaceShipRepo spaceShipRepo,SpaceShipService spaceShipService) {
+    private final CrewRepo crewRepo;
+
+    public SpaceShipController(SpaceShipRepo spaceShipRepo,
+                               SpaceShipService spaceShipService,CrewRepo crewRepo) {
         this.spaceShipRepo=spaceShipRepo;
         this.spaceShipService = spaceShipService;
+        this.crewRepo = crewRepo;
     }
 
     @GetMapping(value = {"/spaceship"})

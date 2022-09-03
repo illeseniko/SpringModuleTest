@@ -18,6 +18,11 @@ public class WebSecConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                /*.authorizeRequests()
+                .antMatchers("/spaceship")
+                .authenticated()
+
+                 */
                 .formLogin()
                 .permitAll()
                 .loginPage("/login")
