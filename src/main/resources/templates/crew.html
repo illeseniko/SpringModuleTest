@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crew infó:</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div>
+  <table>
+    <tr>
+      <th>Név: :</th>
+      <th>Rang:</th>
+
+    </tr>
+    <tr data-th-each="datas:${hivatkozás}">
+      <td th:text="${datas.crewName}">Név: </td>
+      <td th:text="${datas.crewRank}">Rang:  </td>
+    </tr>
+  </table>
+</div>
+
+
+</body>
+
+</html>
